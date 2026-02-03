@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANNAT | The Future of DevOps</title>
+    <meta name="description"
+        content="Mannat - A universal DevOps and Cloud automation system. A wish to build the future of software delivery.">
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">mannat.io</div>
+        <div class="nav-links">
+            <a href="#meaning">Meaning</a>
+            <a href="#problem">Problem</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#vision">Vision</a>
+        </div>
+        <a href="#cta" class="btn btn-secondary nav-cta">Join Vision</a>
+        <div class="mobile-menu-btn">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <span class="material-symbols-outlined">close</span>
+        </div>
+        <a href="#meaning">Meaning</a>
+        <a href="#problem">Problem</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#vision">Vision</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-content fade-in-up">
+            <h1 class="hero-title">MANNAT</h1>
+            <p class="hero-tagline">“A wish to build the future of DevOps.”</p>
+            <p class="hero-description">
+                A universal DevOps and Cloud automation system designed to become the foundational infrastructure for
+                modern software delivery.
+            </p>
+            <div class="hero-buttons">
+                <a href="#what-is" class="btn btn-primary">Explore the Vision</a>
+                <a href="#meaning" class="btn btn-secondary">Why Mannat?</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="material-symbols-outlined">expand_more</span>
+        </div>
+    </header>
+
+    <!-- Meaning Section -->
+    <section id="meaning" class="section meaning-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">The Meaning</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="meaning-content fade-in">
+                <div class="meaning-card glass-card">
+                    <h3>Mannat <span>(n.)</span></h3>
+                    <p class="definition">"A wish."</p>
+                    <p class="meaning-text">
+                        It represents a long-term vision to build a universal system that helps developers and
+                        organizations forever, similar in spirit to Linux or Git.
+                        It is not just a tool, but a foundational wish for a better future in software creation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section problem-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">The Challenge</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Why we need a new foundation.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card problem-card fade-in delay-1">
+                    <span class="material-symbols-outlined icon">construction</span>
+                    <h3>Fragmented Tools</h3>
+                    <p>Too many disconnected tools glued together with fragile scripts.</p>
+                </div>
+                <div class="card problem-card fade-in delay-2">
+                    <span class="material-symbols-outlined icon">sync_problem</span>
+                    <h3>Environment Inconsistency</h3>
+                    <p>"It works on my machine" is still a major global bottleneck.</p>
+                </div>
+                <div class="card problem-card fade-in delay-3">
+                    <span class="material-symbols-outlined icon">lock</span>
+                    <h3>Vendor Lock-in</h3>
+                    <p>Proprietary platforms limit freedom and long-term scalability.</p>
+                </div>
+                <div class="card problem-card fade-in delay-1">
+                    <span class="material-symbols-outlined icon">engineering</span>
+                    <h3>Manual Overhead</h3>
+                    <p>Developers waste hours on operations instead of building features.</p>
+                </div>
+                <div class="card problem-card fade-in delay-2">
+                    <span class="material-symbols-outlined icon">account_tree</span>
+                    <h3>Complex Pipelines</h3>
+                    <p>CI/CD pipelines have become unmanageable spaghetti code.</p>
+                </div>
+                <div class="card problem-card fade-in delay-3">
+                    <span class="material-symbols-outlined icon">settings_system_daydream</span>
+                    <h3>Lack of Standardization</h3>
+                    <p>Every team builds the same deployment wheel from scratch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Mannat -->
+    <section id="what-is" class="section what-is-section">
+        <div class="container flex-row">
+            <div class="text-content fade-in-left">
+                <h2 class="section-title">What is Mannat?</h2>
+                <p class="lead-text">A Universal DevOps & Cloud System.</p>
+                <p>
+                    Mannat is a cloud-agnostic automation platform and lifecycle orchestration engine.
+                    It unifies the entire software lifecycle, Build, Test, Deployment, Runtime, and Cloud
+                    Orchestration, into a single, intelligent system.
+                </p>
+                <ul class="feature-list">
+                    <li><span class="material-symbols-outlined">check_circle</span> Automated from code to cloud</li>
+                    <li><span class="material-symbols-outlined">check_circle</span> Infrastructure as smart definition
+                    </li>
+                    <li><span class="material-symbols-outlined">check_circle</span> Zero-touch operations</li>
+                </ul>
+            </div>
+            <div class="visual-content fade-in-right">
+                <div class="orbit-visual">
+                    <div class="center-core">
+                        <span class="material-symbols-outlined">settings</span>
+                    </div>
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Capabilities -->
+    <section id="capabilities" class="section capabilities-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Key Capabilities</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="grid-3">
+                <div class="card capability-card fade-in">
+                    <div class="card-glow"></div>
+                    <span class="material-symbols-outlined icon">factory</span>
+                    <h3>Automated Build Pipelines</h3>
+                    <p>Intelligent, cached, and parallelized builds for any language.</p>
+                </div>
+                <div class="card capability-card fade-in">
+                    <div class="card-glow"></div>
+                    <span class="material-symbols-outlined icon">science</span>
+                    <h3>Intelligent Testing</h3>
+                    <p>Smart verification workflows that catch bugs before production.</p>
+                </div>
+                <div class="card capability-card fade-in">
+                    <div class="card-glow"></div>
+                    <span class="material-symbols-outlined icon">flight_takeoff</span>
+                    <h3>Zero-touch Deployments</h3>
+                    <p>Safe, gradual rollouts and rollbacks without human intervention.</p>
+                </div>
+                <div class="card capability-card fade-in">
+                    <div class="card-glow"></div>
+                    <span class="material-symbols-outlined icon">monitor_heart</span>
+                    <h3>Self-managed Runtime</h3>
+                    <p>Auto-scaling and self-healing applications in production.</p>
+                </div>
+                <div class="card capability-card fade-in">
+                    <div class="card-glow"></div>
+                    <span class="material-symbols-outlined icon">cloud_circle</span>
+                    <h3>Cloud Agnostic</h3>
+                    <p>Run consistently on AWS, Azure, Google Cloud, or on-premise.</p>
+                </div>
+                <div class="card capability-card fade-in">
+                    <div class="card-glow"></div>
+                    <span class="material-symbols-outlined icon">domain</span>
+                    <h3>Enterprise Scale</h3>
+                    <p>Designed for startups and massive enterprises alike.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiation -->
+    <section class="section differentiation-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Why Mannat is Different</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-item fade-in">
+                    <h3>Infrastructure, Not Just Software</h3>
+                    <p>Inspired by systems like Linux and Git that power the world silently.</p>
+                </div>
+                <div class="diff-item fade-in">
+                    <h3>Long-term Vision</h3>
+                    <p>Built to last decades, not just to solve today's trends.</p>
+                </div>
+                <div class="diff-item fade-in">
+                    <h3>Open & Extensible</h3>
+                    <p>A true community-driven foundation for the industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision" class="section vision-section">
+        <div class="container center-text fade-in">
+            <h2 class="section-title">A Vision for the Future</h2>
+            <p class="vision-text">
+                Mannat serves as the foundation for the next generation of software delivery.
+                A system that evolves with the industry, ensuring stability, scalability, and simplicity at any scale.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section cta-section">
+        <div class="container fade-in">
+            <h2>The Wish Begins Here.</h2>
+            <p>Join us in building the universal operating system for the cloud.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Join the Vision</a>
+                <a href="#" class="btn btn-secondary">Build with Mannat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>MANNAT</h3>
+                <p>Building the future foundation of software delivery.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">GitHub</a>
+                <a href="#">Documentation</a>
+                <a href="#">Community</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mannat Project. Open Source & Forever Free.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+</body>
+
+</html>
