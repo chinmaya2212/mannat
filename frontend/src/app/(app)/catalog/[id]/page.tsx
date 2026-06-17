@@ -1,6 +1,3 @@
-"use client";
-
-import { use } from "react";
 import Link from "next/link";
 import { ArrowLeft, Database, User, Shield, Activity, Tag, FileText, CheckCircle2, AlertTriangle, Key, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,8 +13,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function AssetDetailsPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params);
+export default async function AssetDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   const asset = mockAssetDetails[resolvedParams.id] || mockAssetDetails["asset_1"]; // Fallback to asset 1 for demo
 
   return (
