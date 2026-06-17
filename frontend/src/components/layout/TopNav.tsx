@@ -35,10 +35,8 @@ export function TopNav() {
     <header className="h-16 border-b border-border bg-card flex items-center justify-between px-4 sm:px-6 shrink-0 gap-2 sm:gap-4">
       <div className="flex items-center gap-2 sm:gap-4 flex-1">
         <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden flex-shrink-0 text-muted-foreground hover:text-foreground">
-              <Menu className="h-6 w-6" />
-            </Button>
+          <SheetTrigger className="md:hidden flex-shrink-0 text-muted-foreground hover:text-foreground p-2 -ml-2 rounded-md hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+            <Menu className="h-6 w-6" />
           </SheetTrigger>
           <SheetContent side="left" className="w-72 p-0 flex flex-col bg-card border-r-border">
             <div className="h-16 flex items-center px-6 border-b border-border">
@@ -100,9 +98,9 @@ export function TopNav() {
           </Select>
         </div>
 
-        <Button variant="outline" size="sm" className="hidden md:flex gap-2" onClick={() => setShowFeedback(true)}>
+        <Button variant="outline" size="sm" className="flex gap-2 px-2 sm:px-3" onClick={() => setShowFeedback(true)}>
           <MessageSquare className="h-4 w-4" />
-          Feedback
+          <span className="hidden sm:inline">Feedback</span>
         </Button>
 
         <Button variant="ghost" size="icon" className="relative text-muted-foreground">
