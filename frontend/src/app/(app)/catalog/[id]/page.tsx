@@ -10,6 +10,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { mockAssetDetails } from "@/features/catalog/data/mockData";
 import { formatDistanceToNow } from "date-fns";
 
+export function generateStaticParams() {
+  return Object.keys(mockAssetDetails).map((id) => ({
+    id: id,
+  }));
+}
+
 export default function AssetDetailsPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
   const asset = mockAssetDetails[resolvedParams.id] || mockAssetDetails["asset_1"]; // Fallback to asset 1 for demo
