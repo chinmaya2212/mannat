@@ -113,8 +113,8 @@ export function TopNav() {
 
         <DropdownMenu>
           <DropdownMenuTrigger className="relative h-9 w-9 rounded-full ml-1 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring flex items-center justify-center border-0 cursor-pointer p-0">
-            <Avatar className="h-9 w-9">
-              <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=DataEngineer" alt="@user" />
+            <Avatar className="h-9 w-9 border border-border">
+              <AvatarImage src="https://avatar.vercel.sh/mannat.svg?text=DE" alt="@user" />
               <AvatarFallback className="bg-primary/10 text-primary">DE</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
