@@ -111,11 +111,13 @@ export function TopNav() {
         <FeedbackModal open={showFeedback} onOpenChange={setShowFeedback} />
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="relative h-9 w-9 rounded-full ml-1 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring flex items-center justify-center border-0 bg-transparent cursor-pointer">
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="relative h-9 w-9 rounded-full ml-1 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring flex items-center justify-center border-0 cursor-pointer p-0">
               <Avatar className="h-9 w-9">
-                <AvatarImage src="/avatars/01.png" alt="@user" />
+                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=DataEngineer" alt="@user" />
                 <AvatarFallback className="bg-primary/10 text-primary">DE</AvatarFallback>
               </Avatar>
+            </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="end">
             <DropdownMenuLabel className="font-normal">
@@ -127,10 +129,10 @@ export function TopNav() {
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert("Dummy Data: User Profile Info")}>Profile</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert("Dummy Data: User Settings")}>Settings</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Log out</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert("Dummy Data: Logged out successfully")}>Log out</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
