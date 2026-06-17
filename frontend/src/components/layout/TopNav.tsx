@@ -111,13 +111,11 @@ export function TopNav() {
         <FeedbackModal open={showFeedback} onOpenChange={setShowFeedback} />
 
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="relative h-9 w-9 rounded-full ml-1 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring flex items-center justify-center border-0 cursor-pointer p-0">
-              <Avatar className="h-9 w-9">
-                <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=DataEngineer" alt="@user" />
-                <AvatarFallback className="bg-primary/10 text-primary">DE</AvatarFallback>
-              </Avatar>
-            </Button>
+          <DropdownMenuTrigger className="relative h-9 w-9 rounded-full ml-1 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring flex items-center justify-center border-0 cursor-pointer p-0">
+            <Avatar className="h-9 w-9">
+              <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=DataEngineer" alt="@user" />
+              <AvatarFallback className="bg-primary/10 text-primary">DE</AvatarFallback>
+            </Avatar>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="end">
             <DropdownMenuLabel className="font-normal">
