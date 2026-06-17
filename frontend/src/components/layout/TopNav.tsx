@@ -9,6 +9,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuGroup,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -118,14 +119,16 @@ export function TopNav() {
             </Avatar>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="end">
-            <DropdownMenuLabel className="font-normal">
-              <div className="flex flex-col space-y-1">
-                <p className="text-sm font-medium leading-none">Data Engineer</p>
-                <p className="text-xs leading-none text-muted-foreground">
-                  engineer@mannat.io
-                </p>
-              </div>
-            </DropdownMenuLabel>
+            <DropdownMenuGroup>
+              <DropdownMenuLabel className="font-normal">
+                <div className="flex flex-col space-y-1">
+                  <p className="text-sm font-medium leading-none">Data Engineer</p>
+                  <p className="text-xs leading-none text-muted-foreground">
+                    engineer@mannat.io
+                  </p>
+                </div>
+              </DropdownMenuLabel>
+            </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={() => alert("Dummy Data: User Profile Info")}>Profile</DropdownMenuItem>
             <DropdownMenuItem onClick={() => alert("Dummy Data: User Settings")}>Settings</DropdownMenuItem>
