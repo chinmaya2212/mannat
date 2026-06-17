@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Bell, Search, User, MessageSquare } from "lucide-react";
+import { Bell, Search, User, MessageSquare, Menu } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,14 +21,61 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FeedbackModal } from "@/components/FeedbackModal";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { navItems } from "./Sidebar";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function TopNav() {
   const [showFeedback, setShowFeedback] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <header className="h-16 border-b border-border bg-card flex items-center justify-between px-6 shrink-0">
-      <div className="flex items-center gap-4 flex-1">
-        <div className="relative w-96 hidden lg:block">
+    <header className="h-16 border-b border-border bg-card flex items-center justify-between px-4 sm:px-6 shrink-0 gap-2 sm:gap-4">
+      <div className="flex items-center gap-2 sm:gap-4 flex-1">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="md:hidden flex-shrink-0 text-muted-foreground hover:text-foreground">
+              <Menu className="h-6 w-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left" className="w-72 p-0 flex flex-col bg-card border-r-border">
+            <div className="h-16 flex items-center px-6 border-b border-border">
+              <SheetTitle className="flex items-center gap-2">
+                <div className="h-8 w-8 rounded bg-primary flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-lg">M</span>
+                </div>
+                <span className="text-lg font-semibold text-foreground tracking-tight">Mannat.io</span>
+              </SheetTitle>
+            </div>
+            <div className="flex-1 overflow-y-auto py-4">
+              <nav className="space-y-1 px-3">
+                {navItems.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = pathname === item.href || pathname?.startsWith(`${item.href}/`);
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={cn(
+                        "flex items-center gap-3 px-3 py-3 rounded-md text-base font-medium transition-colors",
+                        isActive 
+                          ? "bg-secondary text-foreground" 
+                          : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
+                      )}
+                    >
+                      <Icon className="h-5 w-5" />
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
+          </SheetContent>
+        </Sheet>
+
+        <div className="relative w-full max-w-sm hidden md:block lg:w-96">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"

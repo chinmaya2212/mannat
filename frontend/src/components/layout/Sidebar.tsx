@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const navItems = [
+export const navItems = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { name: "Lineage Studio", href: "/lineage", icon: GitBranch },
   { name: "Data Catalog", href: "/catalog", icon: BookOpen },
